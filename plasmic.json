@@ -1,0 +1,121 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "6Gu7aqmmEMxG47P38HWD8z",
+      "projectName": "Teru Patient",
+      "version": "latest",
+      "cssFilePath": "plasmic/teru_patient/plasmic_teru_patient.module.css",
+      "components": [
+        {
+          "id": "ftRyfJA8s_",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "6Gu7aqmmEMxG47P38HWD8z",
+          "renderModuleFilePath": "plasmic/teru_patient/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/teru_patient/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        }
+      ],
+      "icons": [],
+      "images": [],
+      "codeComponents": [],
+      "projectApiToken": "TGOYQ7oFgzraNrC2Mn8PsFQdAKFcbyBGe6edhyOZjtqUfco3nUUEJzRFn1mRcxXsTv5rFp3qSYqtytz4wQ",
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "4gXEcnHvLivutULEDuDrbD",
+      "projectName": "Toki-Tailwind",
+      "version": "latest",
+      "cssFilePath": "plasmic/toki_tailwind/plasmic_toki_tailwind.module.css",
+      "components": [
+        {
+          "id": "g1v4RlEahe",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "4gXEcnHvLivutULEDuDrbD",
+          "renderModuleFilePath": "plasmic/toki_tailwind/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/toki_tailwind/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "lgskk7WqCa",
+          "name": "RandomComponents",
+          "type": "managed",
+          "projectId": "4gXEcnHvLivutULEDuDrbD",
+          "renderModuleFilePath": "plasmic/toki_tailwind/PlasmicRandomComponents.tsx",
+          "importSpec": {
+            "modulePath": "RandomComponents.tsx"
+          },
+          "cssFilePath": "plasmic/toki_tailwind/PlasmicRandomComponents.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        }
+      ],
+      "icons": [],
+      "images": [],
+      "codeComponents": [
+        {
+          "id": "1oRTyQ_See",
+          "name": "TailwindInput",
+          "componentImportPath": ""
+        },
+        {
+          "id": "0WTW4smEQN",
+          "name": "TailwindExample",
+          "componentImportPath": ""
+        }
+      ],
+      "projectApiToken": "7Q9j3IjJvpIRvdQ3UilFNQKTsuDLNhsHhxlx5MqPCNcfWmpdMl2x8YieNFs2froMEu1WwND4gFX3YdBVf4w"
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "qpQVHdnHVG",
+        "name": "Screen",
+        "projectId": "6Gu7aqmmEMxG47P38HWD8z",
+        "contextFilePath": "plasmic/teru_patient/PlasmicGlobalVariant__Screen.tsx"
+      },
+      {
+        "id": "8uhITN5aKL",
+        "name": "Screen",
+        "projectId": "4gXEcnHvLivutULEDuDrbD",
+        "contextFilePath": "plasmic/toki_tailwind/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.163",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.163/dist/plasmic.schema.json"
+}
