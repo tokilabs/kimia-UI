@@ -5,9 +5,9 @@ import { initPlasmicLoader } from '@plasmicapp/loader-react';
 export const PLASMIC = initPlasmicLoader({
   projects: [
     {
-      id: '4gXEcnHvLivutULEDuDrbD', // ID of a project you are using
+      id: 'hSC5XMAvbDbmF4e5kuW6xC', // ID of a project you are using
       token:
-        '7Q9j3IjJvpIRvdQ3UilFNQKTsuDLNhsHhxlx5MqPCNcfWmpdMl2x8YieNFs2froMEu1WwND4gFX3YdBVf4w', // API token for that project
+        'aMnJBW2asqkE8YPeKdilxweA1Zx2ZUXyfNie65cwLZAbJZK5Gd2DGnsF3Mrd6dzPzYN95cD04l79PQgqsGA', // API token for that project
     },
   ],
   // Fetches the latest revisions, whether or not they were unpublished!
@@ -28,3 +28,5 @@ PLASMIC.registerComponent(TailwindExample, {
   name: 'TailwindExample',
   props: {},
 });
+
+require('./plasmic-init.components');

@@ -1,12 +1,18 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   darkMode: false,
   purge: [
+    './components/**/*.{js,ts,jsx,tsx}',
     './packages/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './website/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
       padding: {
         container: '2%',
       },
@@ -58,5 +64,5 @@ module.exports = {
       textColor: ['active'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

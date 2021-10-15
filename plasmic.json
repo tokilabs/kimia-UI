@@ -22,94 +22,35 @@
   "defaultPlasmicDir": "./plasmic",
   "projects": [
     {
-      "projectId": "6Gu7aqmmEMxG47P38HWD8z",
-      "projectName": "Teru Patient",
+      "projectId": "hSC5XMAvbDbmF4e5kuW6xC",
+      "projectName": "kimia-ui",
       "version": "latest",
-      "cssFilePath": "plasmic/teru_patient/plasmic_teru_patient.module.css",
-      "components": [
-        {
-          "id": "ftRyfJA8s_",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "6Gu7aqmmEMxG47P38HWD8z",
-          "renderModuleFilePath": "plasmic/teru_patient/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/teru_patient/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        }
-      ],
-      "icons": [],
-      "images": [],
-      "codeComponents": [],
-      "projectApiToken": "TGOYQ7oFgzraNrC2Mn8PsFQdAKFcbyBGe6edhyOZjtqUfco3nUUEJzRFn1mRcxXsTv5rFp3qSYqtytz4wQ",
-      "jsBundleThemes": []
-    },
-    {
-      "projectId": "4gXEcnHvLivutULEDuDrbD",
-      "projectName": "Toki-Tailwind",
-      "version": "latest",
-      "cssFilePath": "plasmic/toki_tailwind/plasmic_toki_tailwind.module.css",
-      "components": [
-        {
-          "id": "g1v4RlEahe",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "4gXEcnHvLivutULEDuDrbD",
-          "renderModuleFilePath": "plasmic/toki_tailwind/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/toki_tailwind/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
-          "id": "lgskk7WqCa",
-          "name": "RandomComponents",
-          "type": "managed",
-          "projectId": "4gXEcnHvLivutULEDuDrbD",
-          "renderModuleFilePath": "plasmic/toki_tailwind/PlasmicRandomComponents.tsx",
-          "importSpec": {
-            "modulePath": "RandomComponents.tsx"
-          },
-          "cssFilePath": "plasmic/toki_tailwind/PlasmicRandomComponents.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        }
-      ],
+      "cssFilePath": "plasmic/kimia_ui/plasmic_kimia_ui.module.css",
+      "components": [],
       "icons": [],
       "images": [],
       "codeComponents": [
         {
-          "id": "1oRTyQ_See",
+          "id": "QSbg8-ePyX",
           "name": "TailwindInput",
           "componentImportPath": ""
         },
         {
-          "id": "0WTW4smEQN",
+          "id": "paTmFyhsAo",
           "name": "TailwindExample",
           "componentImportPath": ""
         }
       ],
-      "projectApiToken": "7Q9j3IjJvpIRvdQ3UilFNQKTsuDLNhsHhxlx5MqPCNcfWmpdMl2x8YieNFs2froMEu1WwND4gFX3YdBVf4w"
+      "projectApiToken": "aMnJBW2asqkE8YPeKdilxweA1Zx2ZUXyfNie65cwLZAbJZK5Gd2DGnsF3Mrd6dzPzYN95cD04l79PQgqsGA"
     }
   ],
   "globalVariants": {
     "variantGroups": [
       {
-        "id": "qpQVHdnHVG",
+        "id": "8CZvMtK1xUh",
         "name": "Screen",
-        "projectId": "6Gu7aqmmEMxG47P38HWD8z",
-        "contextFilePath": "plasmic/teru_patient/PlasmicGlobalVariant__Screen.tsx"
-      },
-      {
-        "id": "8uhITN5aKL",
-        "name": "Screen",
-        "projectId": "4gXEcnHvLivutULEDuDrbD",
-        "contextFilePath": "plasmic/toki_tailwind/PlasmicGlobalVariant__Screen.tsx"
+        "projectId": "hSC5XMAvbDbmF4e5kuW6xC",
+        "contextFilePath": "plasmic/kimia_ui/PlasmicGlobalVariant__Screen.tsx"
       }
     ]
   },

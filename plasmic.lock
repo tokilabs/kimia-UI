@@ -1,68 +1,20 @@
 {
   "projects": [
     {
-      "projectId": "6Gu7aqmmEMxG47P38HWD8z",
+      "projectId": "hSC5XMAvbDbmF4e5kuW6xC",
       "version": "latest",
       "dependencies": {},
       "lang": "ts",
       "fileLocks": [
         {
           "type": "globalVariant",
-          "assetId": "qpQVHdnHVG",
-          "checksum": "eab73fad9e2c64e96b66dcf6b882f970"
+          "assetId": "8CZvMtK1xUh",
+          "checksum": "35b2ff616e8db2f5e9858d58a5431345"
         },
         {
-          "assetId": "6Gu7aqmmEMxG47P38HWD8z",
+          "assetId": "hSC5XMAvbDbmF4e5kuW6xC",
           "type": "projectCss",
           "checksum": "f17743f319f02e02256267ddc4dd966d"
-        },
-        {
-          "type": "renderModule",
-          "assetId": "ftRyfJA8s_",
-          "checksum": "c30b22135f8a564252012811e2d1b338"
-        },
-        {
-          "type": "cssRules",
-          "assetId": "ftRyfJA8s_",
-          "checksum": "c30b22135f8a564252012811e2d1b338"
-        }
-      ]
-    },
-    {
-      "projectId": "4gXEcnHvLivutULEDuDrbD",
-      "version": "latest",
-      "dependencies": {},
-      "lang": "ts",
-      "fileLocks": [
-        {
-          "type": "globalVariant",
-          "assetId": "8uhITN5aKL",
-          "checksum": "9e3b1baccbf4e21c3516ad259e588207"
-        },
-        {
-          "assetId": "4gXEcnHvLivutULEDuDrbD",
-          "type": "projectCss",
-          "checksum": "f17743f319f02e02256267ddc4dd966d"
-        },
-        {
-          "type": "renderModule",
-          "assetId": "g1v4RlEahe",
-          "checksum": "3b0d6bbd2b3b0c541f3821a891e1d60f"
-        },
-        {
-          "type": "cssRules",
-          "assetId": "g1v4RlEahe",
-          "checksum": "3b0d6bbd2b3b0c541f3821a891e1d60f"
-        },
-        {
-          "type": "renderModule",
-          "assetId": "lgskk7WqCa",
-          "checksum": "28cc2a5c3938dc74f3d0f6408b75a309"
-        },
-        {
-          "type": "cssRules",
-          "assetId": "lgskk7WqCa",
-          "checksum": "28cc2a5c3938dc74f3d0f6408b75a309"
         }
       ]
     }
