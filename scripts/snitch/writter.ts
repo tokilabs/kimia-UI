@@ -79,7 +79,10 @@ export class InitWritter {
     }
     this.file.addImportDeclaration({
       namedImports: [comp.name],
-      moduleSpecifier: path.relative(this.file.getFilePath(), comp.path),
+      moduleSpecifier: path
+        .relative(this.file.getFilePath(), comp.path)
+        .replace('.tsx', '')
+        .substring(1),
     });
 
     this.file.addStatements((writter) => {
