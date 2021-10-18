@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface AccordionProps {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ interface AccordionContextProps {
 
 interface AccordionItemProps extends React.HTMLAttributes<HTMLElement> {
   toggle?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   color: 'gray' | 'indigo' | 'green';
 }
 

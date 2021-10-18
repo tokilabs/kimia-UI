@@ -12,6 +12,7 @@ import {
 } from 'ts-morph';
 
 const debug = debugg('snitch:code analyser');
+const typeDebug = debugg('snitch:type_detect');
 
 export interface ComponentInfo {
   path: string;
@@ -91,6 +92,7 @@ export function readFunctionComponentInfo(
         .map((p) => {
           const tsType = p.getTypeAtLocation(propsInterface);
 
+          typeDebug(info.name, tsType.getText());
           return {
             name: p.getName(),
             tsType,

@@ -24,12 +24,13 @@ import { InitWritter } from './snitch/writter';
 const projectRoot = path.resolve(__dirname, '..');
 
 const config = {
-  GENERATE_FULL_INIT: false,
   PLASMIC_PREVIEW_MODE: true,
-  OUTPUT_FILE: 'plasmic-init.components.js',
+  OUTPUT_FILE: 'plasmic-init.ts',
+  MAP_INHERITED_PROPS: true,
   COMPONENT_FILES: [
-    'components/tailwind/**/*.{ts,tsx}', //include all
-    'packages/**/index.{ts,tsx}',
+    // 'components/tailwind/**/*.{ts,tsx}', //include all
+    // 'packages/**/index.{ts,tsx}',
+    'packages/accordion/index.{ts,tsx}',
     // 'packages/card/index.{ts,tsx}',
     // You can also remove files
     // e.g.: '!files/x/**',   //then, exclude   files/x/
@@ -100,55 +101,42 @@ export function run() {
  * @returns A list of paths of files containing at least one component
  */
 function findComponents(project: Project): ComponentInfo[] {
-  const exportedFunctions = project
+  const functionComponents = project
     .getSourceFiles()
     .flatMap((file) => file.getFunctions())
     .filter(
       (f) => f.isExported() && f.getReturnType().getText() === 'JSX.Element',
     );
 
-  debug(`Found ${exportedFunctions.length} function components`);
+  debug(`Found ${functionComponents.length} function components`);
 
-  let exportedClasses: ClassDeclaration[] = project
+  let classComponents: ClassDeclaration[] = project
     .getSourceFiles()
     .flatMap((file) => file.getClasses())
     .filter((c) => c.isExported())
     .filter((c) => c.getExtends().getText().includes('React.Component'));
 
-  debug(`Found ${exportedClasses.length} class components`);
+  debug(`Found ${classComponents.length} class components`);
 
   const components: Array<FunctionDeclaration | ClassDeclaration> = [
-    ...exportedClasses,
-    ...exportedFunctions,
+    ...classComponents,
+    ...functionComponents,
   ];
 
   debug(`Found ${components.length} components: `);
   debug(
-    exportedFunctions
+    functionComponents
       .map((c) => `   ${c.getName()}`)
       .sort()
       .join('\n'),
   );
 
   return [
-    ...exportedFunctions.map((fn) =>
-      readFunctionComponentInfo(fn, { mapAllInheritedProps: true }),
+    ...functionComponents.map((fn) =>
+      readFunctionComponentInfo(fn, { mapAllInheritedProps: config.MAP_INHERITED_PROPS }),
     ),
-    ...exportedClasses.map(readClassComponentInfo),
+    ...classComponents.map(readClassComponentInfo),
   ].filter(Boolean);
-}
-
-function generateRegistrationCode(componentInfo: ComponentInfo): string {
-  return `
-    import ${componentInfo.path};
-    
-    PLASMIC.registerComponent(${componentInfo.name}, {
-      name: "${componentInfo.name}",
-      props: {
-        // NONE YET!
-        // generateRegistrationCall is not implemented
-      }
-    });`;
 }
 
 run();

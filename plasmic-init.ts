@@ -1,32 +1,55 @@
-import TailwindInput from './components/tailwind/input';
-import TailwindExample from './components/tailwind/example';
-
 import { initPlasmicLoader } from '@plasmicapp/loader-react';
-export const PLASMIC = initPlasmicLoader({
+import { Accordion } from '../packages/accordion/index.tsx';
+import { AccordionItem } from '../packages/accordion/index.tsx';
+import { AccordionPanel } from '../packages/accordion/index.tsx';
+
+export const PLASMIC = initPlasmicLoader( {
   projects: [
     {
-      id: 'hSC5XMAvbDbmF4e5kuW6xC', // ID of a project you are using
-      token:
-        'aMnJBW2asqkE8YPeKdilxweA1Zx2ZUXyfNie65cwLZAbJZK5Gd2DGnsF3Mrd6dzPzYN95cD04l79PQgqsGA', // API token for that project
-    },
+      id: "''",
+      token: "''"
+    }
   ],
   // Fetches the latest revisions, whether or not they were unpublished!
   // Disable for production to ensure you render only published changes.
   preview: true,
-});
+}
+);
 
-PLASMIC.registerComponent(TailwindInput, {
-  name: 'TailwindInput',
+
+PLASMIC.registerComponent(Accordion, {
+  name: "Accordion",
   props: {
-    name: 'string',
-    placeholder: 'string',
-    label: 'string',
-  },
-});
+    children: 'string', // any
+    defaultPanel: 'string', // string
+  }
+}
+);
 
-PLASMIC.registerComponent(TailwindExample, {
-  name: 'TailwindExample',
-  props: {},
-});
 
-require('./plasmic-init.components');
+PLASMIC.registerComponent(AccordionItem, {
+  name: "AccordionItem",
+  props: {
+    toggle: 'string', // string
+    children: 'slot', // (UNION) React.ReactNode
+    color: {
+      "type": "choice",
+      "options": [
+        "gray",
+        "indigo",
+        "green"
+      ]
+    }, // (UNION) "gray" | "indigo" | "green"
+  }
+}
+);
+
+
+PLASMIC.registerComponent(AccordionPanel, {
+  name: "AccordionPanel",
+  props: {
+    children: 'string', // any
+    id: 'string', // string
+  }
+}
+);
