@@ -39,6 +39,10 @@ export class InitWritter {
     const projects = getPlasmicProjectsConfig();
 
     this.file.addImportDeclaration({
+      moduleSpecifier: '@plasmicapp/host',
+    });
+
+    this.file.addImportDeclaration({
       moduleSpecifier: '@plasmicapp/loader-react',
       namedImports: ['initPlasmicLoader'],
     });

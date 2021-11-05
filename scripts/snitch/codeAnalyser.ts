@@ -1,5 +1,4 @@
 import { PropType } from '@plasmicapp/host';
-import { LiteralType } from '@ts-morph/common/lib/typescript';
 import debugg from 'debug';
 import {
   FunctionDeclaration,
@@ -17,7 +16,8 @@ const typeDebug = debugg('snitch:type_detect');
 export interface ComponentInfo {
   path: string;
   name: string;
-  props: Array<{
+  propsInterface?: string;
+  props?: Array<{
     name: string;
     tsType: Type;
     plasmicType: PropType;

@@ -18,7 +18,7 @@ import {
   readClassComponentInfo,
   readFunctionComponentInfo,
 } from './snitch/codeAnalyser';
-import { registerComponent } from '@plasmicapp/host';
+
 import { InitWritter } from './snitch/writter';
 
 const projectRoot = path.resolve(__dirname, '..');
@@ -26,11 +26,10 @@ const projectRoot = path.resolve(__dirname, '..');
 const config = {
   PLASMIC_PREVIEW_MODE: true,
   OUTPUT_FILE: 'plasmic-init.ts',
-  MAP_INHERITED_PROPS: true,
+  MAP_INHERITED_PROPS: false,
   COMPONENT_FILES: [
     // 'components/tailwind/**/*.{ts,tsx}', //include all
-    // 'packages/**/index.{ts,tsx}',
-    'packages/accordion/index.{ts,tsx}',
+    'packages/**/index.{ts,tsx}',
     // 'packages/card/index.{ts,tsx}',
     // You can also remove files
     // e.g.: '!files/x/**',   //then, exclude   files/x/
@@ -133,7 +132,9 @@ function findComponents(project: Project): ComponentInfo[] {
 
   return [
     ...functionComponents.map((fn) =>
-      readFunctionComponentInfo(fn, { mapAllInheritedProps: config.MAP_INHERITED_PROPS }),
+      readFunctionComponentInfo(fn, {
+        mapAllInheritedProps: config.MAP_INHERITED_PROPS,
+      }),
     ),
     ...classComponents.map(readClassComponentInfo),
   ].filter(Boolean);

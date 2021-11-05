@@ -1,4 +1,6 @@
+import React from 'react';
 import { ForwardedRef, forwardRef, HTMLAttributes } from 'react';
+import { ComponentInfo } from 'scripts/snitch/codeAnalyser';
 
 interface FieldProps extends HTMLAttributes<HTMLElement> {
   disabled?: boolean;
@@ -24,6 +26,18 @@ const style = {
   iconContainer: `absolute flex border border-transparent left-0 top-0 h-full w-10`,
   icon: `flex items-center justify-center rounded-tl rounded-bl z-10 text-gray-400 text-lg h-full w-full`,
 };
+
+export const FieldComponent: ComponentInfo = {
+  name: 'Field',
+  path: __filename,
+  propsInterface: 'FieldProps',
+};
+
+export class FieldWrapper extends React.Component<FieldProps> {
+  render() {
+    return <Field {...this.props} />;
+  }
+}
 
 const Field = forwardRef((props: FieldProps, ref: Ref) => {
   const {

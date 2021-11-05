@@ -1,3 +1,4 @@
+import '@plasmicapp/host';
 // import '../styles/globals.css';
 import 'tailwindcss/tailwind.css';
 
